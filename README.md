@@ -5,7 +5,7 @@ A Levenshtein automoton contains a pattern string (p) and a Levenshtein edit dis
 *For example:* A given string could be the word "wahoo". This would be used to populate the 
 
 
- Levenshtein/Images/Levenshtein-automaton.jpg 
+ <img src="https://raw.githubusercontent.com/jeffudall/Levenshtein/master/Images/Levenshtein-automaton.jpg" alt="Lev automaton p=whaoo d=2">
 
 
 The Levenshtein program will accept a string or file of strings as input patterns. It will also create automatons with random patterns of DNA characters or alpha-numeric characters. When giving an input pattern and a distance 
