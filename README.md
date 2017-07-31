@@ -21,6 +21,14 @@ A Levenshtein automoton contains a pattern string (p) and a Levenshtein edit dis
 
 In order to make a Levenshtein automaton using Micron's Automata Processor (AP) we must convert the state machine to an automaton using state transition elements (STE's), which are the single automaton resource units of the AP.
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/jeffudall/Levenshtein/master/Images/Levenshtein%20graph%20WAHOO%20w%20arrows%20sm.jpg" width="1000" height="415" alt="state_wahoo_d2_AP">  
+</p>
+
+<p align="center">
+<i><b>Figure 2</b> - Levenshtein automaton built with STE's for the Automata Processor(AP)</i>
+</p>
+
 
 ## Levenshtein Program
 
