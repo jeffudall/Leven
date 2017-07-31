@@ -10,21 +10,23 @@ A Levenshtein automoton contains a pattern string (p) and a Levenshtein edit dis
 </p>
 
 <p align="center">
-<i><b>Figure 1</b> - Levenshtein automaton with string pattern s="wahoo" and edit distance of d=2.</i>
+<i><b>Figure 1</b> - Levenshtein automaton with string pattern s="wahoo" and edit distance of d=2.[1]</i>
 </p>
 
->Starting at the first state, (**0.0**) we feed in the first character of an input string. If the first character is "**w**" this would move the state to the right, to **1.0**, indicating one character match step and zero edits. If it was a blank space this would move to the state right above, to **0.1**, indicating it zero successful character steps and one deletion edit. If it was any other character it would move above and to the right, to **1.1**, indicating one character step with one insertion or substitution edit. It would then continue on to examine the second character at the active state, either **1.0**, 0.1, or **1.1**, and move to the next state depending on if it gets a match(right), deletion(up), or insert/substitution(up and right). 
+>Starting at the first state, (**0.0**) we feed in the first character of an input string. If the first character is "**w**" this would move the state to the right, to (**1.0**), indicating one character match step and zero edits. If it was a blank space this would move to the state right above, to (**0.1**), indicating it zero successful character steps and one deletion edit. If it was any other character it would move above and to the right, to (**1.1**), indicating one character step with one insertion or substitution edit. It would then continue on to examine the second character at the active state, either (**1.0**), (**0.1**), or (**1.1**), and move to the next state depending on if it gets a match(right), deletion(up), or insert/substitution(up and right). 
 
 >If it reaches any of the states to the far right (any 5.X states) this indicates the input string (p) matches the given pattern string within the given edit distance (d). However, if it reaches the top level of the automaton (any of the X.2 states) and encounters a futher edit this will terminate it's movement through the Levenshtein automata, thus preventing a positive match.
 
 ## Automata Processor
 
-In order to make a Levenshtein automaton using Micron's Automata Processor (AP) we must c
+In order to make a Levenshtein automaton using Micron's Automata Processor (AP) we must convert the state machine to an automaton using state transition elements (STE's), which are the single automaton resource units of the AP.
 
 
-The Levenshtein program will accept a string or file of strings as input patterns. It will also create automatons with random patterns of DNA characters or alpha-numeric characters. When giving an input pattern and a distance 
+## Levenshtein Program
+
+The Leven program will accept a string or file of strings as input patterns and create Levenshtein automata with an edit distance chosen by the user. It can also create automatons with random patterns of DNA characters or alpha-numeric characters with a pattern width and edit distance chosen by the user. It will then create an automata network markup language (ANML) file, which is an XML file using the ANML syntax created by Micron.
 
 
 ## References
 
-[1] Roy, Indranil, and Srinivas Aluru. "Finding motifs in biological sequences using the micron automata processor." Parallel and Distributed Processing Symposium, 2014 IEEE 28th International. IEEE, 2014.
+[1] Tracy, Stan, Brunelle, Wadden, Skadron, Robins. "Nondeterministic Finite Automata in Hardware - the Case of the Levenshtein Automaton" University of Verginia Charlottesville, VA, 2016.
