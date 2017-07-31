@@ -17,9 +17,12 @@ A Levenshtein automoton contains a pattern string (p) and a Levenshtein edit dis
 
 >If it reaches any of the states to the far right (any 5.X states) this indicates the input string (p) matches the given pattern string within the given edit distance (d). However, if it reaches the top level of the automaton (any of the X.2 states) and encounters a futher edit this will terminate it's movement through the Levenshtein automata, thus preventing a positive match.
 
+
 ## Automata Processor
 
 In order to make a Levenshtein automaton using Micron's Automata Processor (AP) we must convert the state machine to an automaton using state transition elements (STE's), which are the single automaton resource units of the AP.
+
+Because STE's only output a logical yes/no match for the character they are looking for, extra STE's must be used to simulate the behavior of the automaton. These extra STE's are (**\***) characters that will match on any input. These allow us to construct a Levenstein automaton(Figure 2 below) using STE's that gives us the same behavior as the state machine(Figure 1).
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/jeffudall/Levenshtein/master/Images/Levenshtein%20graph%20WAHOO%20w%20arrows%20sm.jpg" width="1000" height="415" alt="state_wahoo_d2_AP">  
@@ -27,13 +30,15 @@ In order to make a Levenshtein automaton using Micron's Automata Processor (AP) 
 
 <p align="center">
 <i><b>Figure 2</b> - Levenshtein automaton built with STE's for the Automata Processor(AP) 
-<br>(Starting/always active STE's are green and reporting STE's are purple</i>
+<br>(Starting/always active STE's are green and reporting STE's are purple.)</i>
 </p>
 
 
 ## Levenshtein Program
 
 The Leven program will accept a string or file of strings as input patterns and create Levenshtein automata with an edit distance chosen by the user. It can also create automatons with random patterns of DNA characters or alpha-numeric characters with a pattern width and edit distance chosen by the user. It will then create an automata network markup language (ANML) file, which is an XML file using the ANML syntax created by Micron.
+
+(See README file in the Code folder for more information on input syntax and program behavior.)
 
 
 ## References
