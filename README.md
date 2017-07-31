@@ -26,7 +26,8 @@ In order to make a Levenshtein automaton using Micron's Automata Processor (AP) 
 </p>
 
 <p align="center">
-<i><b>Figure 2</b> - Levenshtein automaton built with STE's for the Automata Processor(AP)</i>
+<i><b>Figure 2</b> - Levenshtein automaton built with STE's for the Automata Processor(AP) 
+<br>(Starting/always active STE's are green and reporting STE's are purple</i>
 </p>
 
 
