@@ -1,2 +1,11 @@
 # Levenshtein
-An automaton made of STE's that is used to find how closely a given pattern string, matches an input string within a given edit distance (Levenshtein distance)
+
+A Levenshtein automoton contains a pattern string (p) and a Levenshtein edit distance (d). Any input string that matches pattern string within the edit distance will report a match. A pattern string is used to populate the Levenshtein automaton STE's with characters. The edit distance is the number of edits - insert, substitute, or delete - that are allowed in any matchine string.
+
+*For example:* A given string could be the word "wahoo". This would be used to populate the 
+
+
+ Levenshtein/Images/Levenshtein-automaton.jpg 
+
+
+The Levenshtein program will accept a string or file of strings as input patterns. It will also create automatons with random patterns of DNA characters or alpha-numeric characters. When giving an input pattern and a distance 
