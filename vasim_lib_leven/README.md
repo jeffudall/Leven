@@ -5,19 +5,19 @@ The Levenshtein Automaton ANML Creation Program, *Leven*, is a C++ progam that c
 
 ## Usage
 
-leven [OPTION] \[string/file/width] [lev dist] \[rand DNA or alphanum] [rand iterations];
+leven [OPTION] [string/file/width] [lev dist] [rand DNA or alphanum] [rand iterations]
 
-For STRING: leven s [pattern string] \[lev dist]
-     **example:\ leven s wahoo 2**
-     This will make a lev automaton w 5 STEs "(w)(a)(h)(o)(o) - with lev dist of 2
+For STRING: **leven s [pattern string] \[lev dist]**
+>**example: leven s wahoo 2**
+>This will make a lev automaton w 5 STEs "(w)(a)(h)(o)(o) - with lev dist of 2
 
-For FILE: leven f [pattern file name] \[lev dist]
-     **example: leven f pattern.txt 3**
-     This will make a lev automaton for each group of chars in file. A new line indicates a new automaton.
+For FILE: **leven f [pattern file name] [lev dist]**
+>**example: leven f pattern.txt 3**
+>This will make a lev automaton for each group of chars in file. A new line indicates a new automaton.
   
-For RANDOM: leven r [width] \[lev dist] [DNA or alphanum] \[iterations]
-     **example: leven r 5 2 DNA 15**
-     This will make 15 random lev automata each 5 DNA chars long with a lev dist of 2
+For RANDOM: **leven r [width] \[lev dist] [DNA or alphanum] [iterations]**
+>**example: leven r 5 2 DNA 15**
+>This will make 15 random lev automata each 5 DNA chars long with a lev dist of 2
 
-     **example: leven r 5 2 alphanum 2**
-     This will make 2 random lev automata each 5 alpha-numeric chars long with a lev dist of 2
+>**example: leven r 5 2 alphanum 2**
+>This will make 2 random lev automata each 5 alpha-numeric chars long with a lev dist of 2
