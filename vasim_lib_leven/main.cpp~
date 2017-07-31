@@ -1,0 +1,43 @@
+#include "automata.h"
+
+#define FROM_INPUT_STRING false
+
+using namespace std;
+
+/*
+ *
+ */
+int main(int argc, char * argv[]) {
+
+    // 
+    Automata ap;
+
+    STE *start = new STE("start", "[JACK]", "all-input");
+    STE *stop = new STE("stop", "[JESSE]", "none");
+    stop->setReporting(true);
+    
+    // Add them to data structure 
+    ap.rawAddSTE(start);
+    ap.rawAddSTE(stop);
+
+    // Add edge between them
+    ap.addEdge(start,stop);
+
+    // Emit automata as anml file
+    ap.automataToANMLFile("example.anml");
+
+    // print out how many reports we've seen (this should be 0)
+    cout << ap.getReportVector().size() << endl;
+
+    // enable report gathering for the automata
+    ap.enableReport();
+
+    // simulate the automata on two inputs
+    ap.simulate('J');
+    ap.simulate('J');
+    ap.simulate('J');
+
+    // print out how many reports we've seen (this should be 2)
+    cout << ap.getReportVector().size() << endl;
+
+}

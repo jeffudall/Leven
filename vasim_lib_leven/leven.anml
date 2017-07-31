@@ -1,0 +1,639 @@
+<anml version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<automata-network id="vasim">
+<state-transition-element id="4140"  symbol-set="*"  start="none">
+	<report-on-match/>
+	<activate-on-match element="4151"/>
+<activate-on-match element="4240"/>
+<activate-on-match element="4250"/>
+</state-transition-element>
+<state-transition-element id="4211"  symbol-set="0"  start="none">
+	<activate-on-match element="4221"/>
+</state-transition-element>
+<state-transition-element id="4231"  symbol-set="g"  start="all-input">
+	<activate-on-match element="4241"/>
+</state-transition-element>
+<state-transition-element id="4221"  symbol-set="j"  start="none">
+	<activate-on-match element="4231"/>
+</state-transition-element>
+<state-transition-element id="4151"  symbol-set="e"  start="none">
+	<report-on-match/>
+	<activate-on-match element="4250"/>
+</state-transition-element>
+<state-transition-element id="4131"  symbol-set="g"  start="none">
+	<activate-on-match element="4141"/>
+<activate-on-match element="4230"/>
+<activate-on-match element="4240"/>
+<activate-on-match element="4251"/>
+</state-transition-element>
+<state-transition-element id="4121"  symbol-set="j"  start="all-input">
+	<activate-on-match element="4131"/>
+<activate-on-match element="4220"/>
+<activate-on-match element="4230"/>
+<activate-on-match element="4241"/>
+</state-transition-element>
+<state-transition-element id="4021"  symbol-set="j"  start="none">
+	<activate-on-match element="4031"/>
+<activate-on-match element="4120"/>
+<activate-on-match element="4130"/>
+<activate-on-match element="4141"/>
+<activate-on-match element="4240"/>
+</state-transition-element>
+<state-transition-element id="4011"  symbol-set="0"  start="all-input">
+	<activate-on-match element="4021"/>
+<activate-on-match element="4110"/>
+<activate-on-match element="4120"/>
+<activate-on-match element="4131"/>
+<activate-on-match element="4230"/>
+</state-transition-element>
+<state-transition-element id="4251"  symbol-set="e"  start="none">
+	<report-on-match/>
+	</state-transition-element>
+<state-transition-element id="3240"  symbol-set="*"  start="none">
+	<activate-on-match element="3251"/>
+</state-transition-element>
+<state-transition-element id="3230"  symbol-set="*"  start="none">
+	<activate-on-match element="3241"/>
+</state-transition-element>
+<state-transition-element id="4051"  symbol-set="e"  start="none">
+	<report-on-match/>
+	<activate-on-match element="4150"/>
+</state-transition-element>
+<state-transition-element id="3220"  symbol-set="*"  start="all-input">
+	<activate-on-match element="3231"/>
+</state-transition-element>
+<state-transition-element id="3210"  symbol-set="*"  start="none">
+	<activate-on-match element="3221"/>
+</state-transition-element>
+<state-transition-element id="3140"  symbol-set="*"  start="none">
+	<report-on-match/>
+	<activate-on-match element="3151"/>
+<activate-on-match element="3240"/>
+<activate-on-match element="3250"/>
+</state-transition-element>
+<state-transition-element id="3100"  symbol-set="*"  start="all-input">
+	<activate-on-match element="3111"/>
+<activate-on-match element="3200"/>
+<activate-on-match element="3210"/>
+<activate-on-match element="3221"/>
+</state-transition-element>
+<state-transition-element id="3241"  symbol-set="q"  start="none">
+	<activate-on-match element="3251"/>
+</state-transition-element>
+<state-transition-element id="3151"  symbol-set="q"  start="none">
+	<report-on-match/>
+	<activate-on-match element="3250"/>
+</state-transition-element>
+<state-transition-element id="3141"  symbol-set="q"  start="none">
+	<report-on-match/>
+	<activate-on-match element="3151"/>
+<activate-on-match element="3240"/>
+<activate-on-match element="3250"/>
+</state-transition-element>
+<state-transition-element id="3131"  symbol-set="B"  start="none">
+	<activate-on-match element="3141"/>
+<activate-on-match element="3230"/>
+<activate-on-match element="3240"/>
+<activate-on-match element="3251"/>
+</state-transition-element>
+<state-transition-element id="4230"  symbol-set="*"  start="none">
+	<activate-on-match element="4241"/>
+</state-transition-element>
+<state-transition-element id="3111"  symbol-set="4"  start="none">
+	<activate-on-match element="3121"/>
+<activate-on-match element="3210"/>
+<activate-on-match element="3220"/>
+<activate-on-match element="3231"/>
+</state-transition-element>
+<state-transition-element id="3041"  symbol-set="q"  start="none">
+	<report-on-match/>
+	<activate-on-match element="3051"/>
+<activate-on-match element="3140"/>
+<activate-on-match element="3150"/>
+</state-transition-element>
+<state-transition-element id="3021"  symbol-set="d"  start="none">
+	<activate-on-match element="3031"/>
+<activate-on-match element="3120"/>
+<activate-on-match element="3130"/>
+<activate-on-match element="3141"/>
+<activate-on-match element="3240"/>
+</state-transition-element>
+<state-transition-element id="4150"  symbol-set="*"  start="none">
+	<report-on-match/>
+	<activate-on-match element="4250"/>
+</state-transition-element>
+<state-transition-element id="4241"  symbol-set="t"  start="none">
+	<activate-on-match element="4251"/>
+</state-transition-element>
+<state-transition-element id="4041"  symbol-set="t"  start="none">
+	<report-on-match/>
+	<activate-on-match element="4051"/>
+<activate-on-match element="4140"/>
+<activate-on-match element="4150"/>
+</state-transition-element>
+<state-transition-element id="1131"  symbol-set="W"  start="none">
+	<activate-on-match element="1141"/>
+<activate-on-match element="1230"/>
+<activate-on-match element="1240"/>
+<activate-on-match element="1251"/>
+</state-transition-element>
+<state-transition-element id="0230"  symbol-set="*"  start="none">
+	<activate-on-match element="0241"/>
+</state-transition-element>
+<state-transition-element id="0051"  symbol-set="N"  start="none">
+	<report-on-match/>
+	<activate-on-match element="0150"/>
+</state-transition-element>
+<state-transition-element id="1231"  symbol-set="W"  start="all-input">
+	<activate-on-match element="1241"/>
+</state-transition-element>
+<state-transition-element id="4100"  symbol-set="*"  start="all-input">
+	<activate-on-match element="4111"/>
+<activate-on-match element="4200"/>
+<activate-on-match element="4210"/>
+<activate-on-match element="4221"/>
+</state-transition-element>
+<state-transition-element id="1051"  symbol-set="r"  start="none">
+	<report-on-match/>
+	<activate-on-match element="1150"/>
+</state-transition-element>
+<state-transition-element id="1021"  symbol-set="b"  start="none">
+	<activate-on-match element="1031"/>
+<activate-on-match element="1120"/>
+<activate-on-match element="1130"/>
+<activate-on-match element="1141"/>
+<activate-on-match element="1240"/>
+</state-transition-element>
+<state-transition-element id="1031"  symbol-set="W"  start="none">
+	<report-on-match/>
+	<activate-on-match element="1041"/>
+<activate-on-match element="1130"/>
+<activate-on-match element="1140"/>
+<activate-on-match element="1151"/>
+<activate-on-match element="1250"/>
+</state-transition-element>
+<state-transition-element id="0231"  symbol-set="p"  start="all-input">
+	<activate-on-match element="0241"/>
+</state-transition-element>
+<state-transition-element id="0210"  symbol-set="*"  start="none">
+	<activate-on-match element="0221"/>
+</state-transition-element>
+<state-transition-element id="0150"  symbol-set="*"  start="none">
+	<report-on-match/>
+	<activate-on-match element="0250"/>
+</state-transition-element>
+<state-transition-element id="0240"  symbol-set="*"  start="none">
+	<activate-on-match element="0251"/>
+</state-transition-element>
+<state-transition-element id="0250"  symbol-set="*"  start="none">
+	<report-on-match/>
+	</state-transition-element>
+<state-transition-element id="0200"  symbol-set="*"  start="none">
+	<activate-on-match element="0211"/>
+</state-transition-element>
+<state-transition-element id="0140"  symbol-set="*"  start="none">
+	<report-on-match/>
+	<activate-on-match element="0151"/>
+<activate-on-match element="0240"/>
+<activate-on-match element="0250"/>
+</state-transition-element>
+<state-transition-element id="0131"  symbol-set="p"  start="none">
+	<activate-on-match element="0141"/>
+<activate-on-match element="0230"/>
+<activate-on-match element="0240"/>
+<activate-on-match element="0251"/>
+</state-transition-element>
+<state-transition-element id="4031"  symbol-set="g"  start="none">
+	<report-on-match/>
+	<activate-on-match element="4041"/>
+<activate-on-match element="4130"/>
+<activate-on-match element="4140"/>
+<activate-on-match element="4151"/>
+<activate-on-match element="4250"/>
+</state-transition-element>
+<state-transition-element id="2200"  symbol-set="*"  start="none">
+	<activate-on-match element="2211"/>
+</state-transition-element>
+<state-transition-element id="0130"  symbol-set="*"  start="none">
+	<activate-on-match element="0141"/>
+<activate-on-match element="0230"/>
+<activate-on-match element="0240"/>
+<activate-on-match element="0251"/>
+</state-transition-element>
+<state-transition-element id="2241"  symbol-set="w"  start="none">
+	<activate-on-match element="2251"/>
+</state-transition-element>
+<state-transition-element id="0120"  symbol-set="*"  start="none">
+	<activate-on-match element="0131"/>
+<activate-on-match element="0220"/>
+<activate-on-match element="0230"/>
+<activate-on-match element="0241"/>
+</state-transition-element>
+<state-transition-element id="0110"  symbol-set="*"  start="all-input">
+	<activate-on-match element="0121"/>
+<activate-on-match element="0210"/>
+<activate-on-match element="0220"/>
+<activate-on-match element="0231"/>
+</state-transition-element>
+<state-transition-element id="2041"  symbol-set="w"  start="none">
+	<report-on-match/>
+	<activate-on-match element="2051"/>
+<activate-on-match element="2140"/>
+<activate-on-match element="2150"/>
+</state-transition-element>
+<state-transition-element id="0031"  symbol-set="p"  start="none">
+	<report-on-match/>
+	<activate-on-match element="0041"/>
+<activate-on-match element="0130"/>
+<activate-on-match element="0140"/>
+<activate-on-match element="0151"/>
+<activate-on-match element="0250"/>
+</state-transition-element>
+<state-transition-element id="1230"  symbol-set="*"  start="none">
+	<activate-on-match element="1241"/>
+</state-transition-element>
+<state-transition-element id="0100"  symbol-set="*"  start="all-input">
+	<activate-on-match element="0111"/>
+<activate-on-match element="0200"/>
+<activate-on-match element="0210"/>
+<activate-on-match element="0221"/>
+</state-transition-element>
+<state-transition-element id="4250"  symbol-set="*"  start="none">
+	<report-on-match/>
+	</state-transition-element>
+<state-transition-element id="4130"  symbol-set="*"  start="none">
+	<activate-on-match element="4141"/>
+<activate-on-match element="4230"/>
+<activate-on-match element="4240"/>
+<activate-on-match element="4251"/>
+</state-transition-element>
+<state-transition-element id="0221"  symbol-set="j"  start="none">
+	<activate-on-match element="0231"/>
+</state-transition-element>
+<state-transition-element id="1011"  symbol-set="l"  start="all-input">
+	<activate-on-match element="1021"/>
+<activate-on-match element="1110"/>
+<activate-on-match element="1120"/>
+<activate-on-match element="1131"/>
+<activate-on-match element="1230"/>
+</state-transition-element>
+<state-transition-element id="2051"  symbol-set="5"  start="none">
+	<report-on-match/>
+	<activate-on-match element="2150"/>
+</state-transition-element>
+<state-transition-element id="0111"  symbol-set="5"  start="none">
+	<activate-on-match element="0121"/>
+<activate-on-match element="0210"/>
+<activate-on-match element="0220"/>
+<activate-on-match element="0231"/>
+</state-transition-element>
+<state-transition-element id="1111"  symbol-set="l"  start="none">
+	<activate-on-match element="1121"/>
+<activate-on-match element="1210"/>
+<activate-on-match element="1220"/>
+<activate-on-match element="1231"/>
+</state-transition-element>
+<state-transition-element id="1221"  symbol-set="b"  start="none">
+	<activate-on-match element="1231"/>
+</state-transition-element>
+<state-transition-element id="3211"  symbol-set="4"  start="none">
+	<activate-on-match element="3221"/>
+</state-transition-element>
+<state-transition-element id="2141"  symbol-set="w"  start="none">
+	<report-on-match/>
+	<activate-on-match element="2151"/>
+<activate-on-match element="2240"/>
+<activate-on-match element="2250"/>
+</state-transition-element>
+<state-transition-element id="3250"  symbol-set="*"  start="none">
+	<report-on-match/>
+	</state-transition-element>
+<state-transition-element id="0041"  symbol-set="t"  start="none">
+	<report-on-match/>
+	<activate-on-match element="0051"/>
+<activate-on-match element="0140"/>
+<activate-on-match element="0150"/>
+</state-transition-element>
+<state-transition-element id="0021"  symbol-set="j"  start="none">
+	<activate-on-match element="0031"/>
+<activate-on-match element="0120"/>
+<activate-on-match element="0130"/>
+<activate-on-match element="0141"/>
+<activate-on-match element="0240"/>
+</state-transition-element>
+<state-transition-element id="4210"  symbol-set="*"  start="none">
+	<activate-on-match element="4221"/>
+</state-transition-element>
+<state-transition-element id="2121"  symbol-set="n"  start="all-input">
+	<activate-on-match element="2131"/>
+<activate-on-match element="2220"/>
+<activate-on-match element="2230"/>
+<activate-on-match element="2241"/>
+</state-transition-element>
+<state-transition-element id="3031"  symbol-set="B"  start="none">
+	<report-on-match/>
+	<activate-on-match element="3041"/>
+<activate-on-match element="3130"/>
+<activate-on-match element="3140"/>
+<activate-on-match element="3151"/>
+<activate-on-match element="3250"/>
+</state-transition-element>
+<state-transition-element id="2250"  symbol-set="*"  start="none">
+	<report-on-match/>
+	</state-transition-element>
+<state-transition-element id="0011"  symbol-set="5"  start="all-input">
+	<activate-on-match element="0021"/>
+<activate-on-match element="0110"/>
+<activate-on-match element="0120"/>
+<activate-on-match element="0131"/>
+<activate-on-match element="0230"/>
+</state-transition-element>
+<state-transition-element id="3051"  symbol-set="q"  start="none">
+	<report-on-match/>
+	<activate-on-match element="3150"/>
+</state-transition-element>
+<state-transition-element id="0251"  symbol-set="N"  start="none">
+	<report-on-match/>
+	</state-transition-element>
+<state-transition-element id="1120"  symbol-set="*"  start="none">
+	<activate-on-match element="1131"/>
+<activate-on-match element="1220"/>
+<activate-on-match element="1230"/>
+<activate-on-match element="1241"/>
+</state-transition-element>
+<state-transition-element id="2230"  symbol-set="*"  start="none">
+	<activate-on-match element="2241"/>
+</state-transition-element>
+<state-transition-element id="0121"  symbol-set="j"  start="all-input">
+	<activate-on-match element="0131"/>
+<activate-on-match element="0220"/>
+<activate-on-match element="0230"/>
+<activate-on-match element="0241"/>
+</state-transition-element>
+<state-transition-element id="3120"  symbol-set="*"  start="none">
+	<activate-on-match element="3131"/>
+<activate-on-match element="3220"/>
+<activate-on-match element="3230"/>
+<activate-on-match element="3241"/>
+</state-transition-element>
+<state-transition-element id="3221"  symbol-set="d"  start="none">
+	<activate-on-match element="3231"/>
+</state-transition-element>
+<state-transition-element id="2140"  symbol-set="*"  start="none">
+	<report-on-match/>
+	<activate-on-match element="2151"/>
+<activate-on-match element="2240"/>
+<activate-on-match element="2250"/>
+</state-transition-element>
+<state-transition-element id="0141"  symbol-set="t"  start="none">
+	<report-on-match/>
+	<activate-on-match element="0151"/>
+<activate-on-match element="0240"/>
+<activate-on-match element="0250"/>
+</state-transition-element>
+<state-transition-element id="4110"  symbol-set="*"  start="all-input">
+	<activate-on-match element="4121"/>
+<activate-on-match element="4210"/>
+<activate-on-match element="4220"/>
+<activate-on-match element="4231"/>
+</state-transition-element>
+<state-transition-element id="3200"  symbol-set="*"  start="none">
+	<activate-on-match element="3211"/>
+</state-transition-element>
+<state-transition-element id="0151"  symbol-set="N"  start="none">
+	<report-on-match/>
+	<activate-on-match element="0250"/>
+</state-transition-element>
+<state-transition-element id="2130"  symbol-set="*"  start="none">
+	<activate-on-match element="2141"/>
+<activate-on-match element="2230"/>
+<activate-on-match element="2240"/>
+<activate-on-match element="2251"/>
+</state-transition-element>
+<state-transition-element id="0241"  symbol-set="t"  start="none">
+	<activate-on-match element="0251"/>
+</state-transition-element>
+<state-transition-element id="2011"  symbol-set="9"  start="all-input">
+	<activate-on-match element="2021"/>
+<activate-on-match element="2110"/>
+<activate-on-match element="2120"/>
+<activate-on-match element="2131"/>
+<activate-on-match element="2230"/>
+</state-transition-element>
+<state-transition-element id="1121"  symbol-set="b"  start="all-input">
+	<activate-on-match element="1131"/>
+<activate-on-match element="1220"/>
+<activate-on-match element="1230"/>
+<activate-on-match element="1241"/>
+</state-transition-element>
+<state-transition-element id="0211"  symbol-set="5"  start="none">
+	<activate-on-match element="0221"/>
+</state-transition-element>
+<state-transition-element id="1251"  symbol-set="r"  start="none">
+	<report-on-match/>
+	</state-transition-element>
+<state-transition-element id="4111"  symbol-set="0"  start="none">
+	<activate-on-match element="4121"/>
+<activate-on-match element="4210"/>
+<activate-on-match element="4220"/>
+<activate-on-match element="4231"/>
+</state-transition-element>
+<state-transition-element id="3130"  symbol-set="*"  start="none">
+	<activate-on-match element="3141"/>
+<activate-on-match element="3230"/>
+<activate-on-match element="3240"/>
+<activate-on-match element="3251"/>
+</state-transition-element>
+<state-transition-element id="1151"  symbol-set="r"  start="none">
+	<report-on-match/>
+	<activate-on-match element="1250"/>
+</state-transition-element>
+<state-transition-element id="4200"  symbol-set="*"  start="none">
+	<activate-on-match element="4211"/>
+</state-transition-element>
+<state-transition-element id="2150"  symbol-set="*"  start="none">
+	<report-on-match/>
+	<activate-on-match element="2250"/>
+</state-transition-element>
+<state-transition-element id="1211"  symbol-set="l"  start="none">
+	<activate-on-match element="1221"/>
+</state-transition-element>
+<state-transition-element id="2111"  symbol-set="9"  start="none">
+	<activate-on-match element="2121"/>
+<activate-on-match element="2210"/>
+<activate-on-match element="2220"/>
+<activate-on-match element="2231"/>
+</state-transition-element>
+<state-transition-element id="4220"  symbol-set="*"  start="all-input">
+	<activate-on-match element="4231"/>
+</state-transition-element>
+<state-transition-element id="1110"  symbol-set="*"  start="all-input">
+	<activate-on-match element="1121"/>
+<activate-on-match element="1210"/>
+<activate-on-match element="1220"/>
+<activate-on-match element="1231"/>
+</state-transition-element>
+<state-transition-element id="3110"  symbol-set="*"  start="all-input">
+	<activate-on-match element="3121"/>
+<activate-on-match element="3210"/>
+<activate-on-match element="3220"/>
+<activate-on-match element="3231"/>
+</state-transition-element>
+<state-transition-element id="3231"  symbol-set="B"  start="all-input">
+	<activate-on-match element="3241"/>
+</state-transition-element>
+<state-transition-element id="2240"  symbol-set="*"  start="none">
+	<activate-on-match element="2251"/>
+</state-transition-element>
+<state-transition-element id="1200"  symbol-set="*"  start="none">
+	<activate-on-match element="1211"/>
+</state-transition-element>
+<state-transition-element id="1241"  symbol-set="e"  start="none">
+	<activate-on-match element="1251"/>
+</state-transition-element>
+<state-transition-element id="1210"  symbol-set="*"  start="none">
+	<activate-on-match element="1221"/>
+</state-transition-element>
+<state-transition-element id="1220"  symbol-set="*"  start="all-input">
+	<activate-on-match element="1231"/>
+</state-transition-element>
+<state-transition-element id="1041"  symbol-set="e"  start="none">
+	<report-on-match/>
+	<activate-on-match element="1051"/>
+<activate-on-match element="1140"/>
+<activate-on-match element="1150"/>
+</state-transition-element>
+<state-transition-element id="1240"  symbol-set="*"  start="none">
+	<activate-on-match element="1251"/>
+</state-transition-element>
+<state-transition-element id="1250"  symbol-set="*"  start="none">
+	<report-on-match/>
+	</state-transition-element>
+<state-transition-element id="2021"  symbol-set="n"  start="none">
+	<activate-on-match element="2031"/>
+<activate-on-match element="2120"/>
+<activate-on-match element="2130"/>
+<activate-on-match element="2141"/>
+<activate-on-match element="2240"/>
+</state-transition-element>
+<state-transition-element id="1150"  symbol-set="*"  start="none">
+	<report-on-match/>
+	<activate-on-match element="1250"/>
+</state-transition-element>
+<state-transition-element id="2031"  symbol-set="V"  start="none">
+	<report-on-match/>
+	<activate-on-match element="2041"/>
+<activate-on-match element="2130"/>
+<activate-on-match element="2140"/>
+<activate-on-match element="2151"/>
+<activate-on-match element="2250"/>
+</state-transition-element>
+<state-transition-element id="2151"  symbol-set="5"  start="none">
+	<report-on-match/>
+	<activate-on-match element="2250"/>
+</state-transition-element>
+<state-transition-element id="4240"  symbol-set="*"  start="none">
+	<activate-on-match element="4251"/>
+</state-transition-element>
+<state-transition-element id="3011"  symbol-set="4"  start="all-input">
+	<activate-on-match element="3021"/>
+<activate-on-match element="3110"/>
+<activate-on-match element="3120"/>
+<activate-on-match element="3131"/>
+<activate-on-match element="3230"/>
+</state-transition-element>
+<state-transition-element id="2211"  symbol-set="9"  start="none">
+	<activate-on-match element="2221"/>
+</state-transition-element>
+<state-transition-element id="1141"  symbol-set="e"  start="none">
+	<report-on-match/>
+	<activate-on-match element="1151"/>
+<activate-on-match element="1240"/>
+<activate-on-match element="1250"/>
+</state-transition-element>
+<state-transition-element id="2131"  symbol-set="V"  start="none">
+	<activate-on-match element="2141"/>
+<activate-on-match element="2230"/>
+<activate-on-match element="2240"/>
+<activate-on-match element="2251"/>
+</state-transition-element>
+<state-transition-element id="2221"  symbol-set="n"  start="none">
+	<activate-on-match element="2231"/>
+</state-transition-element>
+<state-transition-element id="4141"  symbol-set="t"  start="none">
+	<report-on-match/>
+	<activate-on-match element="4151"/>
+<activate-on-match element="4240"/>
+<activate-on-match element="4250"/>
+</state-transition-element>
+<state-transition-element id="1140"  symbol-set="*"  start="none">
+	<report-on-match/>
+	<activate-on-match element="1151"/>
+<activate-on-match element="1240"/>
+<activate-on-match element="1250"/>
+</state-transition-element>
+<state-transition-element id="1130"  symbol-set="*"  start="none">
+	<activate-on-match element="1141"/>
+<activate-on-match element="1230"/>
+<activate-on-match element="1240"/>
+<activate-on-match element="1251"/>
+</state-transition-element>
+<state-transition-element id="2231"  symbol-set="V"  start="all-input">
+	<activate-on-match element="2241"/>
+</state-transition-element>
+<state-transition-element id="2251"  symbol-set="5"  start="none">
+	<report-on-match/>
+	</state-transition-element>
+<state-transition-element id="2100"  symbol-set="*"  start="all-input">
+	<activate-on-match element="2111"/>
+<activate-on-match element="2200"/>
+<activate-on-match element="2210"/>
+<activate-on-match element="2221"/>
+</state-transition-element>
+<state-transition-element id="4120"  symbol-set="*"  start="none">
+	<activate-on-match element="4131"/>
+<activate-on-match element="4220"/>
+<activate-on-match element="4230"/>
+<activate-on-match element="4241"/>
+</state-transition-element>
+<state-transition-element id="3150"  symbol-set="*"  start="none">
+	<report-on-match/>
+	<activate-on-match element="3250"/>
+</state-transition-element>
+<state-transition-element id="2110"  symbol-set="*"  start="all-input">
+	<activate-on-match element="2121"/>
+<activate-on-match element="2210"/>
+<activate-on-match element="2220"/>
+<activate-on-match element="2231"/>
+</state-transition-element>
+<state-transition-element id="2120"  symbol-set="*"  start="none">
+	<activate-on-match element="2131"/>
+<activate-on-match element="2220"/>
+<activate-on-match element="2230"/>
+<activate-on-match element="2241"/>
+</state-transition-element>
+<state-transition-element id="3121"  symbol-set="d"  start="all-input">
+	<activate-on-match element="3131"/>
+<activate-on-match element="3220"/>
+<activate-on-match element="3230"/>
+<activate-on-match element="3241"/>
+</state-transition-element>
+<state-transition-element id="0220"  symbol-set="*"  start="all-input">
+	<activate-on-match element="0231"/>
+</state-transition-element>
+<state-transition-element id="1100"  symbol-set="*"  start="all-input">
+	<activate-on-match element="1111"/>
+<activate-on-match element="1200"/>
+<activate-on-match element="1210"/>
+<activate-on-match element="1221"/>
+</state-transition-element>
+<state-transition-element id="2210"  symbol-set="*"  start="none">
+	<activate-on-match element="2221"/>
+</state-transition-element>
+<state-transition-element id="3251"  symbol-set="q"  start="none">
+	<report-on-match/>
+	</state-transition-element>
+<state-transition-element id="2220"  symbol-set="*"  start="all-input">
+	<activate-on-match element="2231"/>
+</state-transition-element>
+</automata-network>
+</anml>
