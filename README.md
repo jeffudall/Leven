@@ -3,7 +3,7 @@
 A Levenshtein automoton contains a pattern string (p) and a Levenshtein edit distance (d). Any input string that matches pattern string within the edit distance will report a match. A pattern string is used to populate the Levenshtein automaton STE's with characters. The edit distance is the number of edits - insert, substitute, or delete - that are allowed in any matchine string.
 
 **Example:** 
->Let's say a given string pattern could is word "wahoo" and the Levenshtein edit distance is two. A Levenshtein automaton with this pattern and edit distance would look like Figure 1 below. The first number in each state's name is the column number, from zero to the number of characters; for "wahoo" this would be 0-5. The second number is number of edits, from 0 to the edit distance; for d=2 it would be 0-2.
+>Let's say the given string pattern is **s**="**wahoo**" and the Levenshtein edit distance is **d**=**2**. A Levenshtein automaton with this pattern and edit distance would look like **Figure 1** below. The first number in each state's name is the column number, from zero to the number of characters; for "wahoo" this would be 0-5. The second number is number of edits, from 0 to the edit distance; for d=2 it would be 0-2.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/jeffudall/Levenshtein/master/Images/Levenshtein-automaton-sm.jpg" width="647" height="300" alt="state_wahoo_d2">  
@@ -22,7 +22,7 @@ A Levenshtein automoton contains a pattern string (p) and a Levenshtein edit dis
 
 In order to make a Levenshtein automaton using Micron's Automata Processor (AP) we must convert the state machine to an automaton using state transition elements (STE's), which are the single automaton resource units of the AP.
 
-STE's only output a logical yes/no match for the character they are looking for. This means that every output arrow will turn on the attached STE if it finds a match. This also means that extra STE's must be used to simulate the behavior of the automaton. These extra STE's, ( **\*** ), will match on any input and connecting them as shown below (Figure 2) allow us to construct a Levenstein automaton using STE's that has the same behavior as the one above using states(Figure 1).
+STE's only output a logical yes/no match for the character they are looking for. This means that every output arrow will turn on the attached STE if it finds a match. This also means that extra STE's must be used to simulate the behavior of the automaton. These extra STE's, ( **\*** ), will match on any input and connecting them as shown below in **Figure 2** allow us to construct a Levenstein automaton using STE's that has the same behavior as the one above using states in **Figure 1**.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/jeffudall/Levenshtein/master/Images/Levenshtein%20graph%20WAHOO%20draft%203%20sm.jpg" width="1000" height="400" alt="state_wahoo_d2_AP">  
