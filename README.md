@@ -44,4 +44,4 @@ The **Leven** program will accept a string or file of strings as input patterns 
 
 ## References
 
-[1] Tracy, Stan, Brunelle, Wadden, Skadron, Robins. "Nondeterministic Finite Automata in Hardware - the Case of the Levenshtein Automaton" University of Verginia Charlottesville, VA, 2016.
+[1] T. Tracy et al., "Nondeterministic Finite Automata in Hardware - the Case of the Levenshtein Automaton" University of Verginia, Charlottesville, VA, 2016.
