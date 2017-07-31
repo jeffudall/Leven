@@ -10,10 +10,10 @@ A Levenshtein automoton contains a pattern string (p) and a Levenshtein edit dis
 </p>
 
 <p align="center">
-<i>Figure 1 - Levenshtein automaton with string pattern s="wahoo" and edit distance of d=2.</i>
+<i><b>Figure 1</b> - Levenshtein automaton with string pattern s="wahoo" and edit distance of d=2.</i>
 </p>
 
->Starting at the first state, 0.0 we feed in the first character of an input string. If the first character is "w" this would move the state to the right, to 1.0, indicating one character match step and zero edits. If it was a blank space this would move to the state right above, to 0.1, indicating it zero successful character steps and one deletion edit. If it was any other character it would move above and to the right, to 1.1, indicating one character step with one insertion or substitution edit. It would then continue on to examine the second character at the active state, either 1.0, 0.1, or 1.1, and move to the next state depending on if it gets a match(right), deletion(up), or insert/substitution(up and right). 
+>Starting at the first state, (**0.0**) we feed in the first character of an input string. If the first character is "**w**" this would move the state to the right, to **1.0**, indicating one character match step and zero edits. If it was a blank space this would move to the state right above, to **0.1**, indicating it zero successful character steps and one deletion edit. If it was any other character it would move above and to the right, to **1.1**, indicating one character step with one insertion or substitution edit. It would then continue on to examine the second character at the active state, either **1.0**, 0.1, or **1.1**, and move to the next state depending on if it gets a match(right), deletion(up), or insert/substitution(up and right). 
 
 >If it reaches any of the states to the far right (any 5.X states) this indicates the input string (p) matches the given pattern string within the given edit distance (d). However, if it reaches the top level of the automaton (any of the X.2 states) and encounters a futher edit this will terminate it's movement through the Levenshtein automata, thus preventing a positive match.
 
