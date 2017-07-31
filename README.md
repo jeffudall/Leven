@@ -25,7 +25,7 @@ In order to make a Levenshtein automaton using Micron's Automata Processor (AP) 
 STE's only output a logical yes/no match for the character they are looking for. This means that every output arrow will turn on the attached STE if it finds a match. This also means that extra STE's must be used to simulate the behavior of the automaton. These extra STE's, ( **\*** ), will match on any input and connecting them as shown below (Figure 2) allow us to construct a Levenstein automaton using STE's that has the same behavior as the one above using states(Figure 1).
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/jeffudall/Levenshtein/master/Images/Levenshtein%20graph%20WAHOO%20w%20arrows%20sm.jpg" width="1000" height="415" alt="state_wahoo_d2_AP">  
+<img src="https://raw.githubusercontent.com/jeffudall/Levenshtein/master/Images/Levenshtein%20graph%20WAHOO%20draft%203%20sm.jpg" width="1000" height="415" alt="state_wahoo_d2_AP">  
 </p>
 
 <p align="center">
