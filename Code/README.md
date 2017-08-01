@@ -47,7 +47,8 @@ Example:
 >>**[(w)(a)(h)(o)(o)]**
 
 ### **File mode**  
-The arguments for file mode are in this format:  
+The **File mode** allows you to import a file with multiple pattern strings to be made into Levenshtein automata. The new line character delimiter separating each string. No spaces are allowed.  
+The arguments for **File mode** are in this format:  
 `leven f <pattern file name> <edit dist>`  
 
 **Example**:  
