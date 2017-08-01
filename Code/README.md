@@ -3,7 +3,7 @@
 The Levenshtein Automaton ANML Creation Program, *leven*, is a C++ progam that can generate Levenshtein automata giving a pattern string, *p*, and Levenshtein edit distance, *d*.
 
 The *leven* executable creates a customized ANML file, named *leven.anml*, based on the command-line arguments provided in this format:  
->*leven \<OPTION> \<string/file name/rand width> \<edit dist> \<rand DNA or alphanum> \<random iterations>*
+`leven \<OPTION> \<string/file name/rand width> \<edit dist> \<rand DNA or alphanum> \<random iterations>`
 
 ## Parameter Descriptions
 
@@ -37,7 +37,7 @@ The program has three modes - **string**, **file**, and **random**.
 
 ### **String mode**  
 the arguments are in this format:  
->*leven s \<pattern string> \<edit dist>* 
+`leven s \<pattern string> \<edit dist>` 
 
 Example:  
 >**leven s wahoo 2**
@@ -48,13 +48,13 @@ Example:
 
 ### **File mode**  
 The arguments for file mode are in this format:  
->*leven f \<pattern file name> \<edit dist>*  
+`leven f \<pattern file name> \<edit dist>`  
 
 **Example**:  
 >**leven f pattern.txt 3**  
 
 >This will make a Levenshtein automaton for each line of chars in file, each with edit distance d=3.  
->If your *pattern.txt* file is:  
+>If your `pattern.txt` file is:  
 >>Bob  
 >>Jones  
 >>Karen  
@@ -68,7 +68,7 @@ The arguments for file mode are in this format:
   
 ### **Random mode**  
 The arguments for random mode are in this format:  
->*leven r \<width> \<edit dist> \<DNA or alphanum> \<iterations>*  
+`leven r \<width> \<edit dist> \<DNA or alphanum> \<iterations>`  
 
 **DNA Example**:  
 >**leven r 5 2 DNA 5** 
