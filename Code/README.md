@@ -38,7 +38,9 @@ The program has three modes - **string**, **file**, and **random**.
 ### **String mode**  
 the arguments are in this format:  
 *leven s \<pattern string> \<edit dist>*  
-Example:  **leven s wahoo 2**  
+Example:  
+>**leven s wahoo 2**
+
 This will make a Levenshtein automaton with p="wahoo" with edit distance of d=2.  
 This uses 5 STEs, one for each character, like this:  
 **[(w)(a)(h)(o)(o)]**
@@ -46,7 +48,9 @@ This uses 5 STEs, one for each character, like this:
 ### **File mode**  
 The arguments for file mode are in this format:  
 *leven f \<pattern file name> \<edit dist>*  
-Example:  **leven f pattern.txt 3**  
+Example:  
+>**leven f pattern.txt 3**  
+
 This will make a Levenshtein automaton for each line of chars in file, each with edit distance d=3.  
 If your *pattern.txt* file is:  
 >Bob  
@@ -55,24 +59,28 @@ If your *pattern.txt* file is:
 >Mary
 
 You will get four Levenshtein automata of various sizes, one for each line of text, like this:  
-**[(B)(o)(b)]  
-[(J)(o)(n)(e)(s)]  
-[(K)(a)(r)(e)(n)]  
-[(M)(a)(r)(y)]**
+**(B)(o)(b)  
+(J)(o)(n)(e)(s)  
+(K)(a)(r)(e)(n)  
+(M)(a)(r)(y)**
   
 ### **Random mode**  
 The arguments for random mode are in this format:  
 *leven r \<width> \<edit dist> \<DNA or alphanum> \<iterations>*   
-**DNA Example**:  **leven r 5 2 DNA 5**  
-This will make five random Levenshtein automata, each 5 DNA chars long, with a edit distance of d=2 like this:  
-**[(A)(T)(G)(G)(C)]  
-[(G)(T)(A)(G)(A)]  
-[(T)(C)(A)(G)(G)]  
-[(C)(G)(A)(T)(C)]  
-[(T)(G)(A)(A)(C)]  
-[(G)(G)(C)(A)(T)]**
+**DNA Example**:  
+>**leven r 5 2 DNA 5** 
 
-**Alpha-num Example**:  **leven r 5 2 alphanum 2**  
+This will make five random Levenshtein automata, each 5 DNA chars long, with a edit distance of d=2 like this:  
+**(A)(T)(G)(G)(C)  
+(G)(T)(A)(G)(A)  
+(T)(C)(A)(G)(G)  
+(C)(G)(A)(T)(C)  
+(T)(G)(A)(A)(C)  
+(G)(G)(C)(A)(T)**
+
+**Alpha-num Example**:
+>**leven r 5 2 alphanum 2**  
+
 This will make two random Levenshtein automata, each five alpha-numeric chars long, with a edit distance of d=2  
-**[(6)(h)(l)(8)(p)]  
-[(o)(N)(i)(d)(M)]**
+**(6)(h)(l)(8)(p)  
+(o)(N)(i)(d)(M)**
