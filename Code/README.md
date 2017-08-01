@@ -37,7 +37,7 @@ The program has three modes - **string**, **file**, and **random**.
 
 ### **String mode**  
 the arguments are in this format:  
-`leven s \<pattern string> \<edit dist>` 
+`leven s <pattern string> <edit dist>` 
 
 Example:  
 >**leven s wahoo 2**
@@ -48,7 +48,7 @@ Example:
 
 ### **File mode**  
 The arguments for file mode are in this format:  
-`leven f \<pattern file name> \<edit dist>`  
+`leven f <pattern file name> <edit dist>`  
 
 **Example**:  
 >**leven f pattern.txt 3**  
@@ -68,7 +68,7 @@ The arguments for file mode are in this format:
   
 ### **Random mode**  
 The arguments for random mode are in this format:  
-`leven r \<width> \<edit dist> \<DNA or alphanum> \<iterations>`  
+`leven r <width> <edit dist> <DNA or alphanum> <iterations>`  
 
 **DNA Example**:  
 >**leven r 5 2 DNA 5** 
