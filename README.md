@@ -1,6 +1,6 @@
 # Levenshtein
 
-A Levenshtein automoton contains a pattern string (p) and a Levenshtein edit distance (d). Any input string that matches pattern string within the edit distance will report a match. A pattern string is used to populate the Levenshtein automaton STE's with characters. The edit distance is the number of edits - insert, substitute, or delete - that are allowed in any matchine string.
+A Levenshtein automoton contains a pattern string (p) and a Levenshtein edit distance (d). Any input string that matches pattern string within the edit distance will report a match. A pattern string is used to populate the Levenshtein automaton STE's with characters. The edit distance is the number of edits - insert, substitute, or delete - that are allowed in any matchine string. Levenshtein automata are used to find closely matching strings, for instance a spell checker could use a Levenshtein automata to look for cloesly matching words for a misspelled word.
 
 **Example:** 
 >Let's say the given string pattern is **s**="**wahoo**" and the Levenshtein edit distance is **d**=**2**. A Levenshtein automaton with this pattern and edit distance would look like **Figure 1** below. The first number in each state's name is the column number, from zero to the number of characters; for "wahoo" this would be 0-5. The second number is number of edits, from 0 to the edit distance; for d=2 it would be 0-2.
