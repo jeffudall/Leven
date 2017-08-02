@@ -27,14 +27,19 @@ else if (*argv[1] == 's'){ // argc should be s for string option
 
     //Parse command line options
 	string p = argv[2]; // get pattern string
-	cout << "pattern = " << p << endl;
+	cout << "  Pattern = " << p << endl;
 	string lev_dist = argv[3]; // get levenshtein distance
-	cout << "lev_dist = " << lev_dist << endl;
+	cout << "  Edit dist = " << lev_dist << endl;
 	int d=(int)lev_dist[0]-48; // put levenshtein distance into an integer variable
-	cout << "d = " << d << endl;
+	//cout << "d = " << d << endl;
 
 	int width = p.length(); // Get pattern length for array width
-	cout << "width = " << width << endl;
+	cout << "  Width = " << width << endl;
+
+	if (width <= d){ // Check to make sure width of pattern is bigger than edit distance
+			cout << "\nERROR: String pattern width must be larger than edit distance!\n" << endl;
+		exit(EXIT_FAILURE);
+	}
 
 	// Make 3D array of STEs
 	// Index size is [iterations = 1], [lev dist + 1], [max string width + 1], [2 - char or star]
@@ -318,6 +323,12 @@ else if (*argv[1] == 'f'){ // argc should be f for file option
 			width = p.length(); // Get pattern length for array width
 			//cout << "\n  Width: " << width << "\n" << endl;
 
+		if (width <= d){ // Check to make sure width of pattern is bigger than edit distance
+			cout << "\nERROR: String pattern width must be larger than edit distance!" << endl;
+			cout << "  Width: " << width << endl;
+			cout << "  Edit dist: " << d << endl;
+			exit(EXIT_FAILURE);
+		}
 
 			/*---------------------------
 			      Populate STE array
@@ -334,6 +345,7 @@ else if (*argv[1] == 'f'){ // argc should be f for file option
 					convert_n = ostringstream(); // Clear temp stream string
 					STE_symbol = p[j-1]; // Get STE symbol from p string
 
+
 					// starting and late start blocks
 					if (j == i+1) { 
 						// Make new STE with name, symbol, and start values
@@ -344,6 +356,8 @@ else if (*argv[1] == 'f'){ // argc should be f for file option
 						// Make new STE with name, symbol, and start values
 						index[w][i][j][1] = new STE(STE_name, STE_symbol, off);
 			}	}	}
+
+			//cout << "  Populate char STEs for iter[" << w+1 << "]: "<< endl;
 
 			//Populate star STEs  - index [w][y][x][0]
 			for (i = 1; i <= d; ++i) {// loop over edit distance
@@ -368,6 +382,7 @@ else if (*argv[1] == 'f'){ // argc should be f for file option
 						index[w][i][j][0] = new STE(STE_name, "*", off);
 			}	}	}
 
+			//cout << "  Populate star STEs for iter[" << w+1 << "]: "<< endl;
 
 			/*---------------------------
 			  	 Set Reporting STEs
@@ -389,6 +404,8 @@ else if (*argv[1] == 'f'){ // argc should be f for file option
 				++rep_dist; // increase report distance before going up to next error level
 			}
 
+			//cout << "  Set reporting STEs for iter[" << w+1 << "]: "<< endl;
+
 			/*---------------------------
 			   Add STEs to data structure
 			 ---------------------------*/
@@ -403,6 +420,7 @@ else if (*argv[1] == 'f'){ // argc should be f for file option
 					ap.rawAddSTE(index[w][i][j][0]);
 			}	}
 
+			//cout << "  Add STEs to AP for iter[" << w+1 << "]: "<< endl;
 
 			/*---------------------------
 			    Add edges between STEs
@@ -465,6 +483,9 @@ else if (*argv[1] == 'f'){ // argc should be f for file option
 					for (j = 0; j < width; ++j) {
 						ap.addEdge(index[w][i][j][0], index[w][i + 2][j + 2][0]);
 			}	}	}
+
+			//cout << "  Add edges to AP for iter[" << w+1 << "]: "<< endl;
+
 		}
 
 		/*--------------------------------
@@ -497,6 +518,13 @@ else if (*argv[1] == 'r'){ // argc should be r for string option
 	string rand_type = argv[4]; // Get random mode type - DNA or alphanum
 	string lev_iter = argv[5]; // Get number of iterations
 	int iter=(int)lev_iter[0]-48; // Put number of iterations into an integer var
+
+	if (width <= d){ // Check to make sure width of pattern is bigger than edit distance
+			cout << "\nERROR: String pattern width must be larger than edit distance!" << endl;
+			cout << "  Width: " << width << endl;
+			cout << "  Edit dist: " << d << endl;
+		exit(EXIT_FAILURE);
+	}
 
 	string prand; // make pattern string var
 	int DNAval, alphanumval; // set vars for random number assignment
@@ -788,64 +816,43 @@ return 0;
 }
 
 
-void usage(char * argv) { // Usage info funct
+void usage(char * argv) { // Usage information funct
 
     cout <<"\n  USAGE:  "
-	<< argv << " [OPTION] [string/file/width] [lev dist] [rand DNA or alphanum] [rand iterations]"<< endl;
+	<< argv << " [MODE] [string/file/width] [edit dist] [r DNA or alphanum] [r iterations]"<< endl;
 
-    cout <<"\n  For STRING:\t"<< argv <<" s [pattern string] [lev dist]"<< endl;
+    cout <<"\n\t       [MODE]:\t"<< "Choose mode of operation:"<< endl;
+    cout <<"\t\t        's' for STRING - Enter pattern string directly in command line for single Lev automaton"<< endl;
+    cout <<"\t\t        'f' for FILE - Import text file with list of strings; each line becomes a Lev automaton"<< endl;
+    cout <<"\t\t        'r' for RANDOM - Create random DNA or alpha-numeric strings for multiple Lev automata"<< endl; 
+
+    cout <<"\n  [string/file/width]:\t"<< "Enter pattern string characters (STRING mode)"<< endl;
+    cout <<"\t\t  \t"<< "Enter file name (FILE mode)"<< endl;
+    cout <<"\t\t  \t"<< "Enter pattern width (number of characters) (RANDOM mode)"<< endl;
+
+    cout <<"\n\t  [edit dist]:\t"<< "Enter edit distance for Lev automata. *NOTE* Must be LESS than string pattern width!"<< endl;
+    cout <<"\n  [r DNA or alphanum]:\t"<< "Type of random string <-ONLY APPLIES TO RANDOM MODE"<< endl;
+    cout <<"\t\t  \t"<< "'DNA' - String of DNA nucleotides A, T, G, or C"<< endl;
+    cout <<"\t\t  \t"<< "'alphanum' - String of alpha-numeric characters"<< endl;
+
+    cout <<"\n       [r iterations]:\t"<< "Enter amount of Lev automata iterations <-ONLY APPLIES TO RANDOM MODE"<< endl;
+
+    cout <<"\n\n  Detailed MODE Usage:"<< endl;
+    cout <<"\n  For STRING:\t"<< argv <<" s [pattern string] [edit dist]"<< endl;
     cout <<"     example:\t"<< argv <<" s wahoo 2 "<< endl;
-    cout <<"\t\t"<< "This will make a lev automaton w 5 STEs"<< endl;
-    cout <<"\t\t"<< "(w)(a)(h)(o)(o) - with lev dist of 2"<< endl;
+    cout <<"\t\t"<< "This will make a Lev automaton of width=5 with edit dist of d=2"<< endl;
+    cout <<"\t\t"<< "(w)(a)(h)(o)(o)"<< endl;
 
-    cout <<"\n    For FILE:\t"<< argv <<" f [pattern file name] [lev dist]"<< endl;
+    cout <<"\n    For FILE:\t"<< argv <<" f [pattern stings file name] [edit dist]"<< endl;
     cout <<"     example:\t"<< argv <<" f pattern.txt 3"<< endl;
-    cout <<"\t\t"<< "This will make a lev automaton for each group of chars in file"<< endl;
-    cout <<"\t\t"<< "New line indicates a new automaton"<< endl;
+    cout <<"\t\t"<< "This will make a Lev automaton for each line of chars in file with edit dist of d=3"<< endl;
+    cout <<"\t\t"<< "*NOTE* Any empty line will abort importing pattern strings"<< endl;
 
-    cout <<"\n  For RANDOM:\t"<< argv <<" r [width] [lev dist] [DNA or alphanum] [iterations]"<< endl;
+    cout <<"\n  For RANDOM:\t"<< argv <<" r [width] [edit dist] [DNA or alphanum] [iterations]"<< endl;
     cout <<"     example:\t"<< argv <<" r 5 2 DNA 15"<< endl;
-    cout <<"\t\t"<< "This will make 15 random lev automata"<< endl;
-    cout <<"\t\t"<< "each 5 DNA chars long with a lev dist of 2"<< endl;
+    cout <<"\t\t"<< "This will make 15 random Lev automata of 5 DNA chars each with edit dist of d=2"<< endl;
     cout <<"     example:\t"<< argv <<" r 5 2 alphanum 2"<< endl;
     cout <<"\t\t"<< "This will make 2 random lev automata"<< endl;
     cout <<"\t\t"<< "each 5 alpha-numeric chars long with a lev dist of 2"<< endl;
 
 }
-
-
-
-
-//VASim code:
-/*
- * Outputs automata to ANML file
- *  meant to be called after optimization passes
- *
-void Automata::automataToANMLFile(string out_fn) {
-
-    string str = "";
-
-    // xml header
-    str += "<anml version=\"1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n";
-    str += "<automata-network id=\"vasim\">\n";
-
-    for(auto el : elements) {
-        str += el.second->toANML();
-        str += "\n";
-    }
-
-    // xml footer
-    str += "</automata-network>\n";
-    str += "</anml>\n";
-
-    // write NFA to file
-    writeStringToFile(str, out_fn);
-}
- */
-
-
-
-
-
-
-
