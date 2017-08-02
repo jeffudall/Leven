@@ -3,12 +3,12 @@
 The Levenshtein Automaton ANML Creation Program, *leven*, is a C++ progam that can generate Levenshtein automata giving a pattern string, *p*, and Levenshtein edit distance, *d*.
 
 The *leven* executable creates a customized ANML file, named *leven.anml*, based on the command-line parameters this format:  
-`leven <OPTION> <string/file name/rand width> <edit dist> <rand DNA or alphanum> <random iterations>`
+`leven <MODE> <string/file name/rand width> <edit dist> <rand DNA or alphanum> <random iterations>`
 
 ## Parameter Descriptions
 
-### \<OPTION>
-This parameter specifies what mode you would like to use, **string**, **file**, or **random**. (See above fore explaination of the different modes.)
+### \<MODE>
+This parameter specifies what mode you would like to use, '`s`' for **String**, '`f`' for **File**, or '`r`' for **Random**. (See below for more detailed  explaination of the different modes.)
 
 ### \<string/file name/rand width>
 This parameter specifies either the string characters in **String mode**, the file name in **File mode**, or the width of the random string(s) to generate in **Random mode**.
