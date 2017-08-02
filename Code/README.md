@@ -2,6 +2,8 @@
 
 The Levenshtein Automaton ANML Creation Program, *leven*, is a C++ progam that can generate Levenshtein automata giving a pattern string, *p*, and Levenshtein edit distance, *d*.
 
+The leven program is dependant on <a href="https://github.com/jackwadden/VASim">VASim</a> by Jack Wadden from University of Virginia. You will need to download VASim and place it in one folder up when compiling main.cpp (or edit the make file). 
+
 The *leven* executable creates a customized ANML file, named *leven.anml*, containing Levenshtein automata based on the command-line parameters in this format:  
 `leven <MODE> <string/file name/rand width> <edit dist> <r DNA or alphanum> <r iterations>`
 
