@@ -10,7 +10,7 @@ A Levenshtein automoton contains a pattern string (p) and a Levenshtein edit dis
 </p>
 
 <p align="center">
-<i><b>Figure 1</b> - Levenshtein automaton with string pattern s="wahoo" and edit distance of d=2.[1]</i>
+<i><b>Figure 1</b> - Levenshtein automaton with string pattern s="wahoo" and edit distance of d=2.[1]
 <br>(Starting/always active state is green and reporting states have purple outlines.)</i>
 </p>
 
