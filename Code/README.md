@@ -10,7 +10,7 @@ The *leven* executable creates a customized ANML file, named *leven.anml*, conta
 ### \<MODE>
 This parameter specifies what mode you would like to use, '`s`' for **String**, '`f`' for **File**, or '`r`' for **Random**.  
 >**String mode** - accepts a string, directly in the command line, and creates a Levenshtein automaton using that pattern string and using a given edit distance.  
->**File mode** - accepts a text file, with each line in the file being implimented as a separate Levenshtein automaton iteration, using a given edit distance.  
+>**File mode** - accepts a text file, with each line in the file being implimented as a separate Levenshtein automaton iteration, using a given edit distance. **NOTE:** Any empty line in the file will abort importing pattern strings.
 >**Random mode** - accepts a character width and edit distance and creates Levenshtein automata using either DNA or alpha-numeric character sets.  
 (See below for more detailed examples of the different modes.)
 
