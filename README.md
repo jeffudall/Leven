@@ -37,9 +37,11 @@ STE's only output a logical yes/no match for the character they are looking for.
 
 ## Levenshtein Program
 
-The **Leven** program will accept a string or file of strings as input patterns and create Levenshtein automata with an edit distance chosen by the user. It can also create automatons with random patterns of DNA characters or alpha-numeric characters with a pattern width and edit distance chosen by the user. It will then create an automata network markup language (ANML) file, which is an XML file using the ANML syntax created by Micron.
+The **leven** program will accept a string or file of strings as input patterns and create Levenshtein automata with an edit distance chosen by the user. It can also create automatons with random patterns of DNA characters or alpha-numeric characters with a pattern width and edit distance chosen by the user. It will then create an automata network markup language (ANML) file, which is an XML file using the ANML syntax created by Micron.
 
-(*See README file in the Code folder for more information on input syntax and program behavior.*)
+(*See  <a href="https://jeffudall.github.io/Levenshtein/Code/">README</a> file in the Code folder for more information on input syntax and program behavior.*)
+
+The leven program is dependant on <a href="https://github.com/jackwadden/VASim">VASim</a> by Jack Wadden from University of Virginia. You will need to download VASim and place it in one folder up when compiling main.cpp (or edit the make file). 
 
 
 ## References
