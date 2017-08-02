@@ -29,15 +29,17 @@ else if (*argv[1] == 's'){ // argc should be s for string option
 	string p = argv[2]; // get pattern string
 	cout << "  Pattern = " << p << endl;
 	string lev_dist = argv[3]; // get levenshtein distance
-	cout << "  Edit dist = " << lev_dist << endl;
+	//cout << "  Edit dist = " << lev_dist << endl;
 	int d=(int)lev_dist[0]-48; // put levenshtein distance into an integer variable
 	//cout << "d = " << d << endl;
 
 	int width = p.length(); // Get pattern length for array width
-	cout << "  Width = " << width << endl;
+
+	cout << "  Pattern width = " << width << endl; // Print out width
+	cout << "  Edit distance = " << lev_dist << endl; //Print out edit dist
 
 	if (width <= d){ // Check to make sure width of pattern is bigger than edit distance
-			cout << "\nERROR: String pattern width must be larger than edit distance!\n" << endl;
+			cout << "\nERROR: String pattern width must be larger than edit distance!" << endl;
 		exit(EXIT_FAILURE);
 	}
 
@@ -209,9 +211,9 @@ else if (*argv[1] == 's'){ // argc should be s for string option
     /*---------------------------------
      * Export automaton as anml file
      ---------------------------------*/
-    //ap.automataToANMLFile("leven.anml");
-
-	ap.automataToANMLFile("leven.anml"); // Customized funct
+	string ANMLname = "leven.anml";
+	ap.automataToANMLFile(ANMLname);
+    cout <<"\n  ANML file created = '" << ANMLname << "'"<< endl;
 
 }
 
@@ -491,7 +493,9 @@ else if (*argv[1] == 'f'){ // argc should be f for file option
 		/*--------------------------------
 		  Export automaton as anml file
 		 --------------------------------*/
-		ap.automataToANMLFile("leven.anml");
+		string ANMLname = "leven.anml";
+		ap.automataToANMLFile(ANMLname);
+    	cout <<"\n  ANML file created = '" << ANMLname << "'"<< endl;
 
 	
 	}else // If file can't be open return error
@@ -796,12 +800,15 @@ else if (*argv[1] == 'r'){ // argc should be r for string option
 				for (j = 0; j < width; ++j) {
 					ap.addEdge(index[w][i][j][0], index[w][i + 2][j + 2][0]);
 		}	}	}
+
 	}
 
     /*--------------------------------
       Export automaton as anml file
      --------------------------------*/
-	ap.automataToANMLFile("leven.anml");
+	string ANMLname = "leven.anml";
+	ap.automataToANMLFile(ANMLname);
+    cout <<"\n  ANML file created = '" << ANMLname << "'"<< endl;
  
 }
 
@@ -856,3 +863,39 @@ void usage(char * argv) { // Usage information funct
     cout <<"\t\t"<< "each 5 alpha-numeric chars long with a lev dist of 2"<< endl;
 
 }
+
+
+
+
+//VASim code:
+/*
+ * Outputs automata to ANML file
+ *  meant to be called after optimization passes
+ *
+void Automata::automataToANMLFile(string out_fn) {
+
+    string str = "";
+
+    // xml header
+    str += "<anml version=\"1.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n";
+    str += "<automata-network id=\"vasim\">\n";
+
+    for(auto el : elements) {
+        str += el.second->toANML();
+        str += "\n";
+    }
+
+    // xml footer
+    str += "</automata-network>\n";
+    str += "</anml>\n";
+
+    // write NFA to file
+    writeStringToFile(str, out_fn);
+}
+ */
+
+
+
+
+
+
