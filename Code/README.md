@@ -10,7 +10,7 @@ The *leven* executable creates a customized ANML file, named *leven.anml*, conta
 ### \<MODE>
 This parameter specifies what mode you would like to use, '`s`' for **String**, '`f`' for **File**, or '`r`' for **Random**.  
 >**String mode** - accepts a string, directly in the command line, and creates a Levenshtein automaton using that pattern string and using a given edit distance.  
->**File mode** - accepts a text file, with each line in the file being implimented as a separate Levenshtein automaton iteration, using a given edit distance. **NOTE:** Any empty line in the file will abort importing pattern strings.
+>**File mode** - accepts a text file, with each line in the file being implimented as a separate Levenshtein automaton iteration, using a given edit distance.  **NOTE:** *Any empty line in the file will abort importing pattern strings.*  
 >**Random mode** - accepts a character width and edit distance and creates Levenshtein automata using either DNA or alpha-numeric character sets.  
 (See below for more detailed examples of the different modes.)
 
@@ -18,8 +18,7 @@ This parameter specifies what mode you would like to use, '`s`' for **String**, 
 This parameter specifies either the string characters in **String mode**, the file name in **File mode**, or the width of the random string(s) to generate in **Random mode**.
 
 ### \<edit dist>
-This parameter specifies the Levenshtein distance used when making the Levenshtein automata. The edit distance is the number of edits a matching string can have and still count as a match. An *edit* is either an **insertion**, **substitution**, or **deletion**.  
-**NOTE:** This number **MUST** be smaller than the pattern string width. (If the pattern string width is equal to or smaller than the edit distance the resulting Levenshtein automaton will match **EVERY** input string, thus making the automaton completely useless.)
+This parameter specifies the Levenshtein distance used when making the Levenshtein automata. The edit distance is the number of edits a matching string can have and still count as a match. An *edit* is either an **insertion**, **substitution**, or **deletion**. **NOTE:** *This number **MUST** be smaller than the pattern string width. (If the pattern string width is equal to or smaller than the edit distance the resulting Levenshtein automaton will match **EVERY** input string, thus making the automaton completely useless.)*
 
 **Example:** If the pattern string is "*wahoo*" and the edit distance is *d=2* then words such as "*wah*" "*wahooes* "*hoos*" "*wallhoo*" etc would all match because they are each only two edits away from "*wahoo*". Other strings like "*wa*" "*oohs*" "*ah*" "oops" will not report a match. Neither will any string report a match that doesn't contain at least three characters from "*wahoo*" in the same order. For instance "*oohaw*" will not report as a match, but "*hoo*" will.
 
@@ -27,10 +26,10 @@ This parameter specifies the Levenshtein distance used when making the Levenshte
 This parameter specifies which random type to use - either '`DNA`' or '`alphanum`'. **Only applies to Random mode**
 
 >#### DNA type
->This **Random mode** type will make random pattern string(s) using the the four DNA nucleobases '`A`'(adenine), '`T`'(thymine), '`G`'(guanine), or '`C`'(cytosine).
+>This will make random pattern string(s) using the the four DNA nucleobases '`A`'(adenine), '`T`'(thymine), '`G`'(guanine), or '`C`'(cytosine).
 
 >#### alphanum type
->This **Random mode** type will make random pattern string(s) using alpha-numeric characters consisting of 0-9 and A-Z (upper case and lower case) characters. 
+>This type will make random pattern string(s) using alpha-numeric characters consisting of 0-9 and A-Z (upper case and lower case) characters. 
 
 ### \<r iterations>
 This parameter specifies how many iterations of Levenshtein automata the resulting ANML file will contain. **Only applies to Random mode**
