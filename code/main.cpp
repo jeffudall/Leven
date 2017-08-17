@@ -1,20 +1,21 @@
-//Author: Jeffrey Udall 
-//Email: jeff.udall@gmail.com
-//University of Virginia 2017
-
-/*Levenshtein wiring algorithm based on paper:
-	T. Tracy II, M. Stan, N. Brunelle, J. Wadden, K. Wang, K. Skadron, G. Robins, 
-	"Nondeterministic Finite Automata in Hardware - the Case of the Levenshtein Automaton" 
-	University of Virginia, Charlottesville, VA, 
-	Proceedings of the Workshop on Architectures and Systems for Big Data (ASBD), 
-	in conjunction with ISCA, June 2015.
 /*
+	Leven - Levenshtein automata creator
+
+	Author: Jeffrey Udall 
+	Email: jeff.udall@gmail.com
+	University of Virginia 2017
+
+	Levenshtein wiring algorithm based on paper:
+		T. Tracy II, M. Stan, N. Brunelle, J. Wadden, K. Wang, K. Skadron, G. Robins, 
+		"Nondeterministic Finite Automata in Hardware - the Case of the Levenshtein Automaton" 
+		University of Virginia, Charlottesville, VA, 
+		Proceedings of the Workshop on Architectures and Systems for Big Data (ASBD), 
+		in conjunction with ISCA, June 2015.
+
+	Dependances:
+		VASim by Jack Wadden - https://github.com/jackwadden/VASim
 
 /*
-Dependances:
-	VASim by Jack Wadden
-	- https://github.com/jackwadden/VASim
-*/
 
 #include "automata.h"
 
